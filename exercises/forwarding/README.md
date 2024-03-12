@@ -10,7 +10,7 @@ with rules. Each rule will map an IP address to the MAC address and output
 port for the next hop.
 
 We will use the following topology for this exercise. It is a single pod of 
-a fat-tree topology and henceforth referred to as pod-topo:
+a fat-tree topology and is henceforth referred to as pod-topo:
 ![pod-topo](./pod-topo.png)
 
 ## The P4 Program
@@ -18,17 +18,37 @@ a fat-tree topology and henceforth referred to as pod-topo:
 The P4 program that will be compiled and installed on the switches is specified 
 in [forwarding.p4](./forwarding.p4). We have looked at different components of 
 this program in the lectures: how to define the headers, defining parsers,
-control blocks and deparsers. 
+control blocks, and deparsers. 
 
 Spend some time to study this program and these components. We will extend this
 program in the next exercise ([filter](../filter)) with more functionality. 
 
-Note taht our P4 program will be written for the V1Model architecture implemented
+Note that our P4 program will be written for the V1Model architecture implemented
 on P4.org's bmv2 software switch. The architecture file for the V1Model
 can be found at: /usr/local/share/p4c/p4include/v1model.p4. This file
-desribes the interfaces of the P4 programmable elements in the architecture,
+describes the interfaces of the P4 programmable elements in the architecture,
 the supported externs, as well as the architecture's standard metadata
 fields. 
+
+# The Switch:  Implement L3 forwarding
+The forwarding.p4 file contains a skeleton P4 program with key pieces of logic replaced by TODO comments. Your implementation should follow the structure given in this file---replace each TODO with logic implementing the missing piece.
+
+A complete forwarding.p4 will contain the following components:
+
+Header type definitions for Ethernet (ethernet_t) and IPv4 (ipv4_t).
+TODO: Parsers for Ethernet and IPv4 that populate ethernet_t and ipv4_t fields.
+An action to drop a packet, using mark_to_drop().
+TODO: An action (called ipv4_forward) that:
+Sets the egress port for the next hop.
+Updates the ethernet destination address with the address of the next hop.
+Updates the ethernet source address with the address of the switch.
+Decrements the TTL.
+TODO: A control that:
+Defines a table that will read an IPv4 destination address, and invoke either drop or ipv4_forward.
+An apply block that applies the table.
+TODO: A deparser that selects the order in which fields are inserted into the outgoing packet.
+A package instantiation supplied with the parser, control, and deparser.
+In general, a package also requires instances of checksum verification and recomputation controls. These are not necessary for this tutorial and are replaced with instantiations of empty controls.
 
 ## The Controller
 
