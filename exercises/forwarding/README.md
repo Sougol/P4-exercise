@@ -39,13 +39,13 @@ A complete forwarding.p4 will contain the following components:
 2. **TODO:** Parsers for Ethernet and IPv4 that populate ethernet_t and ipv4_t fields.
 3. An action to drop a packet, using mark_to_drop().
 4. **TODO:** An action (called ipv4_forward) that:
-  1. Sets the egress port for the next hop.
-  2. Updates the ethernet destination address with the address of the next hop.
-  3. Updates the ethernet source address with the address of the switch.
-  4. Decrements the TTL.
+    1. Sets the egress port for the next hop.
+    2. Updates the ethernet destination address with the address of the next hop.
+    3. Updates the ethernet source address with the address of the switch.
+    4. Decrements the TTL.
 5. **TODO:** A control that:
-  1. Defines a table that will read an IPv4 destination address, and invoke either drop or ipv4_forward.
-  2. An apply block that applies the table.
+    1. Defines a table that will read an IPv4 destination address, and invoke either drop or ipv4_forward.
+    2. An apply block that applies the table.
 6. **TODO:** A deparser that selects the order in which fields are inserted into the outgoing packet.
 7. A package instantiation supplied with the parser, control, and deparser.
   > In general, a package also requires instances of checksum verification and recomputation controls. These are not necessary for this tutorial and are replaced with instantiations of empty controls.
