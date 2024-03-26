@@ -123,7 +123,7 @@ if interested, you can find more information about mininet [here](https://minine
 
 3. Open another shell and run the controller:
    ```bash
-   cd ~/tutorials/exercises/forwarding
+   cd ~/P4-excercise/exercises/forwarding
    ./mycontroller.py
    ```
    This will install the `forwarding.p4` program on the switches and push the
@@ -139,7 +139,7 @@ If you see the following error message when running `mycontroller.py`, then
 the gRPC server is not running on one or more switches.
 
 ```
-p4@p4:~/tutorials/exercises/p4runtime$ ./mycontroller.py
+p4@p4:~/P4-excercise/exercises/p4runtime$ ./mycontroller.py
 ...
 grpc._channel._Rendezvous: <_Rendezvous of RPC that terminated with (StatusCode.UNAVAILABLE, Connect Failed)>
 ```
