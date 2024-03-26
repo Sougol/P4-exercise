@@ -82,9 +82,9 @@ control MyIngress(inout headers hdr,
         /* TODO: fill out code in action body */
     }
 
-    table ipv4_lpm {
+    table ipv4_exact {
         key = {
-            hdr.ipv4.dstAddr: lpm;
+            hdr.ipv4.dstAddr: exact;
         }
         actions = {
             ipv4_forward;
@@ -99,7 +99,7 @@ control MyIngress(inout headers hdr,
         /* TODO: fix ingress control logic
          *  - ipv4_lpm should be applied only when IPv4 header is valid
          */
-        ipv4_lpm.apply();
+        ipv4_exact.apply();
     }
 }
 
