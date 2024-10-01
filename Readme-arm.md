@@ -7,7 +7,7 @@ So, to setup an Ubuntu VM and use P4 compiler on the Mac Silicon computers you n
 
 ## Setup Guide
 
-1. Install [VMware](https://www.vmware.com/ca/products/fusion/fusion-evaluation.html)
+1. Install [VMware]https://blogs.vmware.com/workstation/2024/05/vmware-workstation-pro-now-available-free-for-personal-use.html
 1. Install [Vagrant](https://developer.hashicorp.com/vagrant/install?product_intent=vagrant)
 1. Install Vagrant VMware provider:
 ```
