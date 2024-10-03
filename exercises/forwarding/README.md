@@ -133,7 +133,7 @@ if interested, you can find more information about mininet [here](https://minine
 4. Press `Ctrl-D` or enter `exit` at the mininet prompt to stop Mininet.
 
 ## Deliverable
-Please upload your `forwarding.p4` and one screenshot of your terminal showing that the ping from `h1` to `h2` works. (In the screenshot you must include your JHEDID. It must be original and, e.g., not edited with added text inserted over the original image. Easy ways to do this are to rename terminal prompts or to have a small text file
+Please upload your `forwarding.p4` and one screenshot of your terminal showing that the ping from `h1` to `h2` works to the Canvas. (In the screenshot you must include your JHEDID. It must be original and, e.g., not edited with added text inserted over the original image. Easy ways to do this are to rename terminal prompts or to have a small text file
 window with the JHEDIDs in the screenshot image. 
 
 
