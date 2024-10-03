@@ -96,6 +96,9 @@ Note that while you will not see the Mininet prompt in this exercise, the `run_e
 
 There are several log files in the `logs` folder that can help you debug your code. Specifically `si.log` files contain logs of the steps taken at switch `si` when processing each packet. Note that there are other traffic in the network besides the ones that we generate for the purpose of this exercise. So, you may need to look/search carefully to find logs for the packets you are intersted in. The `h*_out.txt` files contain a list of packets received at each endpoint and can be useful for checking whether you are marking packets correctly or not. 
 
+## Deliverables
+Please upload your `filter.p4`, `mycontroller.py`, and one screenshot of your terminal showing that the packets are marked correctly to the Canvas. (In the screenshot you must include your JHEDID. It must be original and, e.g., not edited with added text inserted over the original image. Easy ways to do this are to rename terminal prompts or to have a small text file window with the JHEDIDs in the screenshot image. 
+
 ## Potential Issues
 
 If you see the following error message when running `mycontroller.py`, then
