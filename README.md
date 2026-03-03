@@ -23,9 +23,6 @@ To build the virtual machine using 'vagrant':
 
 You will need the script to execute to completion before you can see the `p4` login on your virtual machine's GUI. In some cases, the `vagrant up` command brings up only the default `vagrant` login with the password `vagrant`. Dependencies may or may not have been installed for you to proceed with running P4 programs. Please refer to the [existing issues](https://github.com/p4lang/tutorials/issues) to help fix your problem or create a new one if your specific problem isn't addressed there.
 
-To use the GCP image:
-- You can get the students' credit through email. (You need to email me your Gmail account (e.g. sougol@gmail.com) with the title "[SDNCourse]-GCP".)
-- There is an intro to GCP in the Canvas that walks you through building a VM with a prebuilt image. (Modules -> Tools)
 
 ## P4 Documentation and Extra Resources
 
